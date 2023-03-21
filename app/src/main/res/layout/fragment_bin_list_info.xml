@@ -1,17 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".presentation.BinListInfoFragment">
 
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvBin"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        android:gravity="center"
+        android:text="@string/bank_identification_number"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/binLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:hint="@string/enter_the_card_number"
+        app:layout_constraintEnd_toEndOf="@+id/tvBin"
+        app:layout_constraintStart_toStartOf="@+id/tvBin"
+        app:layout_constraintTop_toBottomOf="@id/tvBin">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#D6D4D4"
+            android:inputType="number" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/enterButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="#7AC346"
+        android:text="@string/find"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@+id/binLayout"
+        app:layout_constraintStart_toStartOf="@+id/binLayout"
+        app:layout_constraintTop_toBottomOf="@+id/binLayout" />
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
         app:cardUseCompatPadding="true"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/enterButton">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -318,4 +362,4 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

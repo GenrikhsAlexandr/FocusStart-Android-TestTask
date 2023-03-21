@@ -6,48 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".presentation.BinActivity">
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tvBin"
+    <include
+        layout="@layout/content_bin"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_margin="16dp"
-        android:gravity="center"
-        android:text="@string/bank_identification_number"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        android:textStyle="bold"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/binLayout"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:hint="@string/enter_the_card_number"
-        app:layout_constraintEnd_toEndOf="@+id/tvBin"
-        app:layout_constraintStart_toStartOf="@+id/tvBin"
-        app:layout_constraintTop_toBottomOf="@id/tvBin">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#D6D4D4"
-            android:inputType="number" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/enterButton"
-        android:text="@string/find"
-        android:textAllCaps="false"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="#7AC346"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="@+id/binLayout"
-        app:layout_constraintStart_toStartOf="@+id/binLayout"
-        app:layout_constraintTop_toBottomOf="@+id/binLayout" />
+        app:layout_constraintTop_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

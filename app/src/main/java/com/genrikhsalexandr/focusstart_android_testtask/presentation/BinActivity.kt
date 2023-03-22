@@ -13,8 +13,8 @@ class BinActivity : AppCompatActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
-      binding = ActivityBinBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
+        binding = ActivityBinBinding.inflate(layoutInflater)
         setContentView(binding.root)
         replaceFragment(BinListInfoFragment())
     }

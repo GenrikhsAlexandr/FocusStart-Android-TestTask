@@ -1,12 +1,12 @@
 package com.genrikhsalexandr.focusstart_android_testtask.data.api
 
-import com.genrikhsalexandr.focusstart_android_testtask.data.pojo.Example
+import com.genrikhsalexandr.focusstart_android_testtask.data.dto.BinDto
 import retrofit2.http.GET
 import retrofit2.http.Path
 
 interface BinService {
 
-    @GET("{}")
+    @GET("{bin}")
     suspend fun getBinInfo(
-        @Path("") number: Int): Example
+        @Path("bin") number: Int): BinDto
 }

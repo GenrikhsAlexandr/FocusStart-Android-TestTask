@@ -6,26 +6,26 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.ViewModelProvider
-import com.genrikhsalexandr.focusstart_android_testtask.databinding.FragmentBinListInfoBinding
+import com.genrikhsalexandr.focusstart_android_testtask.databinding.FragmentBinBinding
 
-class BinListInfoFragment : Fragment() {
+class BinFragment : Fragment() {
 
     companion object {
-        fun newInstance() = BinListInfoFragment()
+        fun newInstance() = BinFragment()
     }
 
-    private val viewModel: BinListInfoViewModel by viewModels()
-    private var _binding: FragmentBinListInfoBinding? = null
-    private val binding: FragmentBinListInfoBinding get() = _binding!!
-
+    private val viewModel: BinViewModel by viewModels()
+    private var _binding: FragmentBinBinding? = null
+    private val binding: FragmentBinBinding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View? {
-        _binding = FragmentBinListInfoBinding.inflate(inflater, container, false)
+        _binding = FragmentBinBinding.inflate(inflater, container, false)
         return binding.root
+
+
     }
 
 
@@ -34,3 +34,4 @@ class BinListInfoFragment : Fragment() {
         _binding = null
     }
 }
+

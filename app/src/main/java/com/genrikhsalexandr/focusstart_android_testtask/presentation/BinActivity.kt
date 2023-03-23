@@ -11,16 +11,15 @@ class BinActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityBinBinding
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityBinBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        replaceFragment(BinListInfoFragment())
+        replaceFragment(BinFragment())
     }
     private fun replaceFragment(fragment: Fragment) {
         supportFragmentManager.commit {
-            replace(R.id.list_info_container, fragment)
+            replace(R.id.bin_container, fragment)
         }
     }
 }

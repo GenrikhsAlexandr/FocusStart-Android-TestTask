@@ -8,5 +8,6 @@ interface BinService {
 
     @GET("{bin}")
     suspend fun getBinInfo(
-        @Path("bin") number: Int): BinDto
+        @Path("bin") number: Int
+    ): BinDto
 }

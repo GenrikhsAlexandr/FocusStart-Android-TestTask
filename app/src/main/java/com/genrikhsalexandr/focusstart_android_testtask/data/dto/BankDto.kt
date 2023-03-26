@@ -3,7 +3,9 @@ package com.genrikhsalexandr.focusstart_android_testtask.data.dto
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class Country(
+data class BankDto (
     val name: String,
-    val emoji: String,
+    val url: String,
+    val phone: String,
+    val city: String
 )

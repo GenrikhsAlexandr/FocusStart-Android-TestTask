@@ -15,4 +15,7 @@
     <string name="prepaid">PREPAID</string>
     <string name="country">COUNTRY</string>
     <string name="bank">BANK</string>
+    <string name="request_history">Request History</string>
+    <string name="Yes">Yes</string>
+    <string name="No">No</string>
 </resources>

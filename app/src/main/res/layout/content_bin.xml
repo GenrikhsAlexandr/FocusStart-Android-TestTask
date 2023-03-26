@@ -4,6 +4,7 @@
     android:id="@+id/bin_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:layout="@layout/fragment_bin">
+    tools:layout="@layout/fragment_bin"
+    android:name="com.genrikhsalexandr.focusstart_android_testtask.presentation.BinFragment">
 
 </androidx.fragment.app.FragmentContainerView>

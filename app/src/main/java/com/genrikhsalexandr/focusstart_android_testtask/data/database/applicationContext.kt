@@ -10,11 +10,9 @@ class ApplicationContext : Application() {
         context = applicationContext
     }
 
-     companion object {
+    companion object {
         private var context: Context? = null
-         val appContext:Context?
-         get() = context
+        val appContext: Context?
+            get() = context
     }
-
-
 }

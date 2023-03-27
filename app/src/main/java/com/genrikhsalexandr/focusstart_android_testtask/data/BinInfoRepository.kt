@@ -25,7 +25,14 @@ object BinInfoRepository {
         .addConverterFactory(json.asConverterFactory("application/json".toMediaType()))
         .client(
             OkHttpClient.Builder()
-                .apply { addInterceptor(HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)) }
+                .apply {
+                    addInterceptor(
+                        HttpLoggingInterceptor().setLevel(
+                            HttpLoggingInterceptor
+                                .Level.BODY
+                        )
+                    )
+                }
                 .build()
         )
         .build()
@@ -36,7 +43,6 @@ object BinInfoRepository {
         ApplicationContext.appContext!!,
         AppDatabase::class.java, "database-name"
     ).build()
-
 
     suspend fun getCardInfo(bin: Int) = service.getBinInfo(bin)
 

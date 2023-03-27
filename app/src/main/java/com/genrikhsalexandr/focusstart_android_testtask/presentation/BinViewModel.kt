@@ -22,6 +22,7 @@ class BinViewModel(
                     repository.saveCardRequest(bin.toInt())
                     request.value = repository.getCardRequest().map {
                         it.bin
+
                     }
                 } catch (e: Exception) {
                     e.printStackTrace()

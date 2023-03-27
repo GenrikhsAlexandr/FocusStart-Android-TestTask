@@ -31,7 +31,7 @@ class BinActivity : AppCompatActivity() {
     private fun replaceFragment(fragment: Fragment) {
         supportFragmentManager.commit {
             replace(R.id.bin_container, fragment)
-            addToBackStack("BinFragment")
+            addToBackStack(null)
         }
     }
 }

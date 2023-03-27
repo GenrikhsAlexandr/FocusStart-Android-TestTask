@@ -12,10 +12,6 @@ import kotlinx.coroutines.launch
 
 class BinFragment : Fragment() {
 
-    companion object {
-        fun newInstance() = BinFragment()
-    }
-
     private val viewModel: BinViewModel by activityViewModels()
     private var _binding: FragmentBinBinding? = null
     private val binding: FragmentBinBinding get() = _binding!!
@@ -27,20 +23,20 @@ class BinFragment : Fragment() {
         _binding = FragmentBinBinding.inflate(inflater, container, false)
 
         binding.enterButton.setOnClickListener {
-
             viewModel.getCardInfo(binding.binET.text.toString())
         }
 
         lifecycleScope.launch {
-            viewModel.request.collect{ it ->
-                binding.requestHistory.text = it.joinToString { it.toString() + "\n" }
+            viewModel.request.collect { it ->
+                _binding?.requestHistory?.text =
+                    it.joinToString(separator = "") { it.toString() + "\n" }
             }
         }
         return binding.root
     }
 
-override fun onDestroyView() {
-    super.onDestroyView()
-    _binding = null
-}
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
 }

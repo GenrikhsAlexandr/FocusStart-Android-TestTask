@@ -52,7 +52,7 @@ object BinInfoRepository {
 
     suspend fun getCardRequest(): List<CardRequest> {
         val userDao = db.cardRequestDao()
-        return userDao.getBinInfo()
+        return userDao.getListCardRequest()
     }
 }
 

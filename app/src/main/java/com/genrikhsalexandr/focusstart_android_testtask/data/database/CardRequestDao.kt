@@ -8,7 +8,7 @@ import androidx.room.Query
 @Dao
 interface CardRequestDao {
     @Query("SELECT * FROM card_request")
-    suspend fun getBinInfo(): List<CardRequest>
+    suspend fun getListCardRequest(): List<CardRequest>
 
     @Insert
     suspend fun insertBinInfo(vararg cardRequest: CardRequest)

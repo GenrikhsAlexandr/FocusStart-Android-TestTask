@@ -7,7 +7,5 @@ import androidx.room.RoomDatabase
 @Database(entities = [CardRequest::class], version = 1, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
 
-
-
     abstract fun cardRequestDao(): CardRequestDao
 }

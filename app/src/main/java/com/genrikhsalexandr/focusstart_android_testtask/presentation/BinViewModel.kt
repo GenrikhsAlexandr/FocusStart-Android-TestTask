@@ -14,6 +14,15 @@ class BinViewModel(
     val cardInfo: MutableStateFlow<BinDto?> = MutableStateFlow(null)
 
     val request: MutableStateFlow<List<Int>> = MutableStateFlow(emptyList())
+
+    init {
+        viewModelScope.launch {
+            request.value = repository.getCardRequest().map {
+                it.bin
+            }
+        }
+    }
+
     fun getCardInfo(bin: String) {
         if (bin.length >= 6) {
             viewModelScope.launch {

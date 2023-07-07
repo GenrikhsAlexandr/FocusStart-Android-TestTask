@@ -12,7 +12,6 @@ class BinViewModel(
 ) : ViewModel() {
 
     val cardInfo: MutableStateFlow<BinDto?> = MutableStateFlow(null)
-
     val request: MutableStateFlow<List<Int>> = MutableStateFlow(emptyList())
 
     init {
